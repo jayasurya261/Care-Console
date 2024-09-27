@@ -1,0 +1,58 @@
+/* BuyNow.css */
+
+.buy-now-container {
+    padding: 20px;
+  }
+  
+  .buy-now-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .order-status {
+    margin-top: 20px;
+  }
+
+  /* BuyNow.css */
+.buy-now-container {
+    padding: 20px;
+  }
+  
+  .order-status {
+    margin-bottom: 20px;
+  }
+  
+  .progress-tracker {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px;
+  }
+  
+  .progress-line {
+    height: 100%;
+    background-color: #76c7c0; /* Change to any color you like */
+    border-radius: 5px; /* Rounded corners */
+    transition: width 0.5s ease; /* Smooth transition */
+  }
+  
+  

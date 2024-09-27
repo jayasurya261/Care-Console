@@ -71,7 +71,7 @@ const Header = () => {
   }
 
   return (
-    <div className="flex lg:space-x-[700px] bg-slate-400 pb-2 mb-10 ">
+    <div className="flex lg:space-x-[600px] bg-slate-400 pb-2 mb-10 ">
       <div>
         <img className="w-44 pl-20 " src={images.logo} alt="" />
       </div>
@@ -92,6 +92,11 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="mr-8 hidden lg:block">
+                  <Link to="http://localhost:5678/Home">
+                    < p className="text-white hover:scale-125 text-[18px]">Pharmacy</p>
+                  </Link>
+                </li>
+                <li className="mr-8 hidden lg:block">
                   <Link to="/about">
                     <p className="text-white hover:scale-125 text-[18px]">About Us</p>
                   </Link>
@@ -102,6 +107,11 @@ const Header = () => {
                 <li className="mr-8 hidden lg:block">
                   <Link to="/contact">
                     <p className="text-white hover:scale-125 text-[18px]">Contact Us</p>
+                  </Link>
+                </li>
+                <li className="mr-8 hidden lg:block">
+                  <Link to="/ai">
+                    <p className="text-white hover:scale-125 text-[18px]">Care AI</p>
                   </Link>
                 </li>
               </div>

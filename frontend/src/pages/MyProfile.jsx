@@ -52,10 +52,7 @@ const MyProfile = () => {
               <p>EMAIL : </p>
               <p>{userEmail}</p>
             </div>
-            <div className='flex mb-5 font-medium'>
-              <p>PASSWORD : </p>
-              <p>{userPassword}</p>
-            </div>
+            
             <div className='flex mb-5 font-medium'>
               <p>NUMBER : </p>
               <p>{userNumber}</p>

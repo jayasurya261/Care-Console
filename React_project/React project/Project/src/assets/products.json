@@ -1,0 +1,352 @@
+[
+  {
+    "id": "1",
+    "name": "Aspirin 500mg",
+    "description": "Pain reliever and fever reducer.",
+    "price": 5.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Aspirin+500mg"
+  },
+  {
+    "id": "2",
+    "name": "Ibuprofen 200mg",
+    "description": "Anti-inflammatory pain reliever.",
+    "price": 7.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Ibuprofen+200mg"
+  },
+  {
+    "id": "3",
+    "name": "Vitamin C 1000mg",
+    "description": "Supports immune health.",
+    "price": 12.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Vitamin+C+1000mg"
+  },
+  {
+    "id": "4",
+    "name": "Cetirizine 10mg",
+    "description": "Allergy relief tablet.",
+    "price": 9.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Cetirizine+10mg"
+  },
+  {
+    "id": "5",
+    "name": "Naproxen 250mg",
+    "description": "Pain and inflammation relief.",
+    "price": 8.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Naproxen+250mg"
+  },
+  {
+    "id": "6",
+    "name": "Omeprazole 20mg",
+    "description": "Acid reducer for heartburn relief.",
+    "price": 14.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Omeprazole+20mg"
+  },
+  {
+    "id": "7",
+    "name": "Loratadine 10mg",
+    "description": "Non-drowsy allergy relief.",
+    "price": 11.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Loratadine+10mg"
+  },
+  {
+    "id": "8",
+    "name": "Diphenhydramine 25mg",
+    "description": "Allergy and sleep aid.",
+    "price": 6.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Diphenhydramine+25mg"
+  },
+  {
+    "id": "9",
+    "name": "Hydrochlorothiazide 12.5mg",
+    "description": "Diuretic for high blood pressure.",
+    "price": 10.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Hydrochlorothiazide+12.5mg"
+  },
+  {
+    "id": "10",
+    "name": "Metformin 500mg",
+    "description": "Medication for type 2 diabetes.",
+    "price": 13.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Metformin+500mg"
+  },
+  {
+    "id": "11",
+    "name": "Simvastatin 20mg",
+    "description": "Cholesterol-lowering medication.",
+    "price": 15.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Simvastatin+20mg"
+  },
+  {
+    "id": "12",
+    "name": "Lisinopril 10mg",
+    "description": "Medication for high blood pressure.",
+    "price": 9.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Lisinopril+10mg"
+  },
+  {
+    "id": "13",
+    "name": "Lorazepam 1mg",
+    "description": "Anti-anxiety medication.",
+    "price": 14.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Lorazepam+1mg"
+  },
+  {
+    "id": "14",
+    "name": "Amoxicillin 500mg",
+    "description": "Antibiotic for bacterial infections.",
+    "price": 11.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Amoxicillin+500mg"
+  },
+  {
+    "id": "15",
+    "name": "Azithromycin 250mg",
+    "description": "Antibiotic for respiratory infections.",
+    "price": 13.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Azithromycin+250mg"
+  },
+  {
+    "id": "16",
+    "name": "Clonazepam 0.5mg",
+    "description": "Medication for seizures and panic disorders.",
+    "price": 12.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Clonazepam+0.5mg"
+  },
+  {
+    "id": "17",
+    "name": "Prednisone 10mg",
+    "description": "Anti-inflammatory medication.",
+    "price": 16.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Prednisone+10mg"
+  },
+  {
+    "id": "18",
+    "name": "Zolpidem 10mg",
+    "description": "Medication for insomnia.",
+    "price": 18.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Zolpidem+10mg"
+  },
+  {
+    "id": "19",
+    "name": "Guaifenesin 200mg",
+    "description": "Expectorant for cough relief.",
+    "price": 8.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Guaifenesin+200mg"
+  },
+  {
+    "id": "20",
+    "name": "Dextromethorphan 10mg",
+    "description": "Cough suppressant.",
+    "price": 7.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Dextromethorphan+10mg"
+  },
+  {
+    "id": "21",
+    "name": "Ranitidine 150mg",
+    "description": "Antacid for stomach acid reduction.",
+    "price": 9.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Ranitidine+150mg"
+  },
+  {
+    "id": "22",
+    "name": "Allopurinol 100mg",
+    "description": "Medication for gout.",
+    "price": 11.89,
+    "imageUrl": "https://via.placeholder.com/150?text=Allopurinol+100mg"
+  },
+  {
+    "id": "23",
+    "name": "Metoprolol 50mg",
+    "description": "Medication for high blood pressure and heart problems.",
+    "price": 10.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Metoprolol+50mg"
+  },
+  {
+    "id": "24",
+    "name": "Warfarin 5mg",
+    "description": "Anticoagulant to prevent blood clots.",
+    "price": 15.59,
+    "imageUrl": "https://via.placeholder.com/150?text=Warfarin+5mg"
+  },
+  {
+    "id": "25",
+    "name": "Hydrocodone 10mg",
+    "description": "Pain reliever with opioid effects.",
+    "price": 17.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Hydrocodone+10mg"
+  },
+  {
+    "id": "26",
+    "name": "Furosemide 40mg",
+    "description": "Diuretic for fluid retention and high blood pressure.",
+    "price": 12.19,
+    "imageUrl": "https://via.placeholder.com/150?text=Furosemide+40mg"
+  },
+  {
+    "id": "27",
+    "name": "Levothyroxine 50mcg",
+    "description": "Thyroid hormone replacement.",
+    "price": 13.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Levothyroxine+50mcg"
+  },
+  {
+    "id": "28",
+    "name": "Montelukast 10mg",
+    "description": "Allergy and asthma medication.",
+    "price": 14.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Montelukast+10mg"
+  },
+  {
+    "id": "29",
+    "name": "Ciprofloxacin 500mg",
+    "description": "Antibiotic for bacterial infections.",
+    "price": 15.39,
+    "imageUrl": "https://via.placeholder.com/150?text=Ciprofloxacin+500mg"
+  },
+  {
+    "id": "30",
+    "name": "Sertraline 50mg",
+    "description": "Antidepressant for depression and anxiety.",
+    "price": 18.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Sertraline+50mg"
+  },
+  {
+    "id": "31",
+    "name": "Ezetimibe 10mg",
+    "description": "Cholesterol-lowering medication.",
+    "price": 13.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Ezetimibe+10mg"
+  },
+  {
+    "id": "32",
+    "name": "Diazepam 5mg",
+    "description": "Anti-anxiety and muscle relaxant.",
+    "price": 12.59,
+    "imageUrl": "https://via.placeholder.com/150?text=Diazepam+5mg"
+  },
+  {
+    "id": "33",
+    "name": "Mupirocin 2%",
+    "description": "Topical antibiotic for skin infections.",
+    "price": 7.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Mupirocin+2%"
+  },
+  {
+    "id": "34",
+    "name": "Tamsulosin 0.4mg",
+    "description": "Medication for enlarged prostate.",
+    "price": 14.19,
+    "imageUrl": "https://via.placeholder.com/150?text=Tamsulosin+0.4mg"
+  },
+  {
+    "id": "35",
+    "name": "Lansoprazole 15mg",
+    "description": "Acid reducer for GERD.",
+    "price": 12.89,
+    "imageUrl": "https://via.placeholder.com/150?text=Lansoprazole+15mg"
+  },
+  {
+    "id": "36",
+    "name": "Risperidone 2mg",
+    "description": "Antipsychotic medication.",
+    "price": 16.39,
+    "imageUrl": "https://via.placeholder.com/150?text=Risperidone+2mg"
+  },
+  {
+    "id": "37",
+    "name": "Bupropion 100mg",
+    "description": "Antidepressant and smoking cessation aid.",
+    "price": 15.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Bupropion+100mg"
+  },
+  {
+    "id": "38",
+    "name": "Topiramate 50mg",
+    "description": "Medication for seizures and migraine prevention.",
+    "price": 14.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Topiramate+50mg"
+  },
+  {
+    "id": "39",
+    "name": "Clarithromycin 500mg",
+    "description": "Antibiotic for bacterial infections.",
+    "price": 16.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Clarithromycin+500mg"
+  },
+  {
+    "id": "40",
+    "name": "Tramadol 50mg",
+    "description": "Pain reliever for moderate to severe pain.",
+    "price": 13.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Tramadol+50mg"
+  },
+  {
+    "id": "41",
+    "name": "Atenolol 50mg",
+    "description": "Medication for high blood pressure and heart conditions.",
+    "price": 11.59,
+    "imageUrl": "https://via.placeholder.com/150?text=Atenolol+50mg"
+  },
+  {
+    "id": "42",
+    "name": "Metronidazole 500mg",
+    "description": "Antibiotic for infections.",
+    "price": 12.69,
+    "imageUrl": "https://via.placeholder.com/150?text=Metronidazole+500mg"
+  },
+  {
+    "id": "43",
+    "name": "Propranolol 40mg",
+    "description": "Medication for high blood pressure and anxiety.",
+    "price": 10.89,
+    "imageUrl": "https://via.placeholder.com/150?text=Propranolol+40mg"
+  },
+  {
+    "id": "44",
+    "name": "Nystatin 100,000 units",
+    "description": "Antifungal medication for yeast infections.",
+    "price": 9.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Nystatin+100,000+units"
+  },
+  {
+    "id": "45",
+    "name": "Sulfamethoxazole/Trimethoprim 800/160mg",
+    "description": "Antibiotic for bacterial infections.",
+    "price": 13.59,
+    "imageUrl": "https://via.placeholder.com/150?text=Sulfamethoxazole+Trimethoprim+800/160mg"
+  },
+  {
+    "id": "46",
+    "name": "Carvedilol 25mg",
+    "description": "Medication for heart failure and high blood pressure.",
+    "price": 12.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Carvedilol+25mg"
+  },
+  {
+    "id": "47",
+    "name": "Methylprednisolone 4mg",
+    "description": "Anti-inflammatory medication.",
+    "price": 14.29,
+    "imageUrl": "https://via.placeholder.com/150?text=Methylprednisolone+4mg"
+  },
+  {
+    "id": "48",
+    "name": "Cefuroxime 500mg",
+    "description": "Antibiotic for bacterial infections.",
+    "price": 17.99,
+    "imageUrl": "https://via.placeholder.com/150?text=Cefuroxime+500mg"
+  },
+  {
+    "id": "49",
+    "name": "Spironolactone 25mg",
+    "description": "Diuretic for fluid retention and high blood pressure.",
+    "price": 11.79,
+    "imageUrl": "https://via.placeholder.com/150?text=Spironolactone+25mg"
+  },
+  {
+    "id": "50",
+    "name": "Tadalafil 10mg",
+    "description": "Medication for erectile dysfunction.",
+    "price": 19.49,
+    "imageUrl": "https://via.placeholder.com/150?text=Tadalafil+10mg"
+  }
+]

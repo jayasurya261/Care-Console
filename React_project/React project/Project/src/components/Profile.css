@@ -1,0 +1,12 @@
+.user-profile-container{
+    width: 100px;
+    height: 150px;
+    display: flex;
+    border: 10px;
+    border-radius: 5%;
+    padding: 100px;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}

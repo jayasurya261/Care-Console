@@ -32,7 +32,7 @@ const AppointmentInfo = () => {
       console.log(error)
     })
   
-
+    alert("Prescription and Fees Added")
 
 
 

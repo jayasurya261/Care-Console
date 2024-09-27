@@ -261,7 +261,7 @@ router.get('/alert', async(request,response)=>{
         .create({
             body: 'EMERGENCY ALERT!!! Doctor have Problem!!!',
             from: '+13347083108',
-            // to: '+918148955789'
+            to: '+918148955789'
             // to: '+919787981210'
         })
         .then(message => console.log(message.sid))

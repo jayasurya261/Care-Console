@@ -45,17 +45,14 @@ const ConfirmBooking = () => {
   }
 
   return (
-    <div className="flex pb-32 bg-gradient-to-r from-slate-400 via-slate-200 to-slate-00 w-full">
+    <div className="flex pb-32 ">
       <div>
         <img className="w-96 ml-40 rounded-[20px]" src={images.doctor} alt="Doctor" />
       </div>
       <div className="ml-28">
         <p className="text-3xl font-medium mb-10">CONFIRM APPOINTMENT</p>
         <p className="text-2xl font-medium mb-5">Dr. Hermoine M.B.B.S</p>
-        <div className="flex font-medium mb-5">
-          <p>FEES: </p>
-          <p>RS.500</p>
-        </div>
+        
         <div className="flex font-medium mb-5">
           <p>DATE: </p>
           <p>{date}</p>

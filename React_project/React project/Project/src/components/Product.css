@@ -1,0 +1,48 @@
+.product{
+    width: 200px;
+    height: 300px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+.product .img{
+
+    width: 100%;
+    height: 150px;
+}
+.product .img img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.details{
+    padding: 5px;
+}
+.details h3{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.details p{
+    
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(16, 137, 137);
+}
+.details button{
+    margin-top: 5px;
+    background-color: teal;
+    color: aliceblue;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: rgb(2, 89, 89);
+}
+.btnRemove{
+    background-color:teal;
+}
+.btnRemove button:hover{
+    background-color:rgb(150, 38, 38) !important;
+}

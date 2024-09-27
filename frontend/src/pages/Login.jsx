@@ -42,8 +42,8 @@ const Login = () => {
   };
 
   return (
-    <div className='flex justify-center bg-gradient-to-r from-slate-400 via-slate-200 to-slate-00 w-full'>
-      <form className='text-center justify-center bg-slate-400 mb-20 p-24 rounded-3xl' onSubmit={submit}>
+    <div className='flex justify-center '>
+      <form className='text-center justify-center bg-slate-200 mb-20 p-24 rounded-3xl' onSubmit={submit}>
         <p className='font-medium text-3xl'>LOGIN</p>
         <input
           type="email"

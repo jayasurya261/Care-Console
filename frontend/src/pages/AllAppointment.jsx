@@ -19,7 +19,7 @@ const AllAppointment = () => {
       },[])
       console.log(appointmentsData)
   return (
-    <div>
+    <div className='mb-[400px]'>
       <div>
         <p className='mb-10 font-medium text-3xl ml-5'>ALL APPOINTMENTS</p>
         <div className=''>

@@ -19,6 +19,10 @@ import ECommerce from './pages/ECommerce'
 import AboutUs from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import Appointment from './pages/Appointment'
+import Main from './components/main/Main'
+import ContextProvider from './context/Context.jsx'
+import Payment from './pages/Payment.jsx'
+import ChatBot from './pages/ChatBot.jsx'
 
 
 
@@ -28,6 +32,7 @@ const App = () => {
   
   return (
   <div>
+    <ContextProvider>
     <Header/>
     <Routes>
       <Route path='/' element={<Home/>}/>
@@ -48,9 +53,14 @@ const App = () => {
       <Route path='/about' element={<AboutUs/>}/>
       <Route path='/contact' element={<ContactUs/>}/>
       <Route path='/appointmentDetails/:_id' element={<Appointment/>}/>
+      <Route path='/ai' element={<Main/>}/>
+      <Route path='/payment' element={<Payment/>}/>
+
 
     </Routes>
+    <ChatBot/>
     <Footer/>
+    </ContextProvider>
     </div>
   )
 }

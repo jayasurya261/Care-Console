@@ -10,6 +10,7 @@ import twitter from './twitter.png'
 import info from './info.png'
 import sos from './sos.png'
 import clinic from './clinic.jpg'
+import payment from './payment.jpg'
 
 export const images = {
     logo,
@@ -24,4 +25,5 @@ export const images = {
     info,
     sos,
     clinic,
+    payment,
 }

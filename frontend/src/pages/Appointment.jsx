@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Appointment = () => {
  
@@ -19,8 +20,9 @@ const Appointment = () => {
     console.log(prescription) // Prevent form submission from reloading the page
     console.log(fees);
     const data = {
-      prescription,
       fees,
+      prescription,
+      
     }
   };
 
@@ -92,6 +94,14 @@ const Appointment = () => {
             <p>Prescription: </p>
             <p>{prescription}</p>
           </div>
+          {
+            fees ==="No prescription added"?"":<div className='flex mb-4 justify-center'>
+            
+            <Link to='/payment'>
+            <button className='p-3 rounded-[10px] bg-slate-400'>Pay Online</button>
+            </Link>
+          </div>
+          }
         
         </div>
       </div>
