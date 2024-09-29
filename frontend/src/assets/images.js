@@ -11,6 +11,10 @@ import info from './info.png'
 import sos from './sos.png'
 import clinic from './clinic.jpg'
 import payment from './payment.jpg'
+import bg from './bg.jpg'
+import edit from './edit.png'
+import dele from './delete.png'
+import back from './back.png'
 
 export const images = {
     logo,
@@ -26,4 +30,8 @@ export const images = {
     sos,
     clinic,
     payment,
+    bg,
+    edit,
+    dele,
+    back,
 }

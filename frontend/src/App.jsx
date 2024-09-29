@@ -23,6 +23,13 @@ import Main from './components/main/Main'
 import ContextProvider from './context/Context.jsx'
 import Payment from './pages/Payment.jsx'
 import ChatBot from './pages/ChatBot.jsx'
+import InventoryChart from './pages/InventoryChart.jsx'
+import InventoryTablets from './pages/InventoryTablets.jsx'
+import AddTablet from './pages/tablet/AddTablet.jsx'
+import DeleteTablet from './pages/tablet/DeleteTablet'
+import EditTablet from './pages/tablet/EditTablet'
+import InfoTablet from './pages/tablet/InfoTablet'
+import Back from './components/Back'
 
 
 
@@ -55,6 +62,13 @@ const App = () => {
       <Route path='/appointmentDetails/:_id' element={<Appointment/>}/>
       <Route path='/ai' element={<Main/>}/>
       <Route path='/payment' element={<Payment/>}/>
+      <Route path='/inventory-chart' element={<InventoryChart/>}/>
+      <Route path='/tablets' element={<InventoryTablets/>}/>
+      <Route path='/addTablets' element={<AddTablet/>}/>
+      <Route path='/editTablets/:_id' element={<EditTablet/>}/>
+      <Route path='/deleteTablets/:_id' element={<DeleteTablet/>}/>
+      <Route path='/infoTablets/:_id' element={<InfoTablet/>}/>
+      <Route path='/back' element={<Back/>}/>
 
 
     </Routes>

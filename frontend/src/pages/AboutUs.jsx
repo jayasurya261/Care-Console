@@ -1,8 +1,15 @@
 import React from 'react'
 import {images} from '../assets/images'
+import { Link } from 'react-router-dom'
+import Back from '@/components/Back'
 
 const AboutUs = () => {
-  return (
+  return (<>
+   <div className=''>
+     <Link to={'/home'}>
+     <Back />
+     </Link>
+     </div>
     <div className='text-center '>
         <p className='text-2xl font-bold underline'>Care Console Clinic</p>
       <div className='flex justify-center'>
@@ -17,6 +24,7 @@ In addition to our expertise in infant care, we specialize in the diagnosis and 
         </div>
       </div>
     </div>
+    </>
   )
 }
 

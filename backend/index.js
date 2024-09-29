@@ -17,6 +17,7 @@ app.get('/',(request,response)=>{
 app.use('/users',userRoutes);
 app.use('/appointments',userRoutes);
 app.use('/admin',userRoutes);
+app.use('/tablets',userRoutes);
 
 mongoose
     .connect(mongoDBURL)

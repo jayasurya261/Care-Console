@@ -55,6 +55,16 @@ const appointmentsSchema = mongoose.Schema(
         timestamps:true
     }
 )
+const tabletSchema = new mongoose.Schema({
+    name: { type: String, required: true },  // Tablet name
+    category: { type: String, required: true },  // Category (e.g., brand, type)
+    quantity: { type: Number, required: true },  // Current stock quantity
+    lastUpdated: { type: Date, default: Date.now }  // Timestamp of last update
+  });
+  
+  export const Tablet = mongoose.model('Tablet', tabletSchema);
+  
+ 
 
 export const User = mongoose.model('User',userSchema );
 export const Appointments = mongoose.model('Appointments',appointmentsSchema );

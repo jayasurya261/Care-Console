@@ -3,6 +3,7 @@ import axios from 'axios'
 import {images} from '../assets/images'
 import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import Back from '@/components/Back'
 
 const AllAppointment = () => {
 
@@ -23,6 +24,11 @@ const AllAppointment = () => {
       console.log(appointmentsData)
   return (
     <div className='mb-96'>
+       <div className='mb-5'>
+     <Link to={'/home'}>
+     <Back  />
+     </Link>
+     </div>
       <div>
          <p className='mb-10 font-medium text-3xl ml-5'>ALL APPOINTMENTS</p>
         <div className=''>

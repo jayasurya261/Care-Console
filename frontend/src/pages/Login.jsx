@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import Back from '@/components/Back';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -41,8 +42,14 @@ const Login = () => {
     }
   };
 
-  return (
+  return (<>
+  <div className=''>
+     <Link to={'/signup'}>
+     <Back  />
+     </Link>
+     </div>
     <div className='flex justify-center '>
+     
       <form className='text-center justify-center bg-slate-200 mb-20 p-24 rounded-3xl' onSubmit={submit}>
         <p className='font-medium text-3xl'>LOGIN</p>
         <input
@@ -72,6 +79,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+    </>
   );
 };
 

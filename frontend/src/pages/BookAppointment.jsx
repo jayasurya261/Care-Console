@@ -7,6 +7,9 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Default styles for react-calendar
 import TimePicker from 'react-time-picker'; // Install this package
 import 'react-time-picker/dist/TimePicker.css';
+import { Link } from 'react-router-dom'
+import Back from '@/components/Back'
+
 
 const BookAppointment = () => {
 
@@ -82,7 +85,12 @@ const BookAppointment = () => {
 
 
   return (
-    <div className='l'>
+    <div className=''>
+       <div className=''>
+     <Link to={'/home'}>
+     <Back  />
+     </Link>
+     </div>
         <div className='flex justify-center mb-7 font-medium text-3xl'>
         <p className=''>DOCTOR APPOINTMENT</p>
         </div>

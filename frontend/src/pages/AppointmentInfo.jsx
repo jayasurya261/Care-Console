@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Back from '@/components/Back';
+import { Link } from 'react-router-dom';
 
 const AppointmentInfo = () => {
   const [email, setEmail] = useState('');
@@ -71,6 +73,12 @@ const AppointmentInfo = () => {
   }, [email]);
 
   return (
+    <>
+     <div className=''>
+     <Link to={'/signup'}>
+     <Back  />
+     </Link>
+     </div>
     <div className='flex justify-center pt-10 pb-12'>
       <div className='flex justify-center bg-slate-200 shadow-2xl p-10 rounded-[20px]'>
         <div>
@@ -123,6 +131,7 @@ const AppointmentInfo = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

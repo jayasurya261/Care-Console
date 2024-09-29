@@ -3,6 +3,8 @@ import { images } from '../assets/images';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Back from '@/components/Back';
 
 const ConfirmBooking = () => {
   const [email, setEmail] = useState('');
@@ -46,6 +48,11 @@ const ConfirmBooking = () => {
 
   return (
     <div className="flex pb-32 ">
+       <div className=''>
+     <Link to={'/appointment'}>
+     <Back  />
+     </Link>
+     </div>
       <div>
         <img className="w-96 ml-40 rounded-[20px]" src={images.doctor} alt="Doctor" />
       </div>
@@ -67,6 +74,7 @@ const ConfirmBooking = () => {
           </button>
         </div>
       </div>
+      
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import express from 'express'
-import { User,Appointments,Admin } from '../models/models.js';
+import { User,Appointments,Admin,Tablet } from '../models/models.js';
 const router = express.Router();
 import twilio from 'twilio';
 
@@ -275,6 +275,73 @@ router.get('/alert', async(request,response)=>{
         response.status(500).send({message:error.message})
     }
 })
+
+
+
+
+//----------Inventary Management----------
+router.post('/add-tablet', async (req, res) => {
+    const { name, category, quantity } = req.body;
+    
+    try {
+      const newTablet = new Tablet({ name, category, quantity });
+      await newTablet.save();
+      res.status(201).json({ message: 'Tablet added successfully' });
+    } catch (error) {
+      res.status(500).json({ message: 'Error adding tablet', error });
+    }
+  });
+
+
+  router.put('/updateTablet/:_id', async (req, res) => {
+    const { _id } = req.params;
+    const { name,category,quantity } = req.body;
+    
+    try {
+      const tablet = await Tablet.findByIdAndUpdate(_id, {name,category, quantity, lastUpdated: Date.now() }, { new: true });
+      if (!tablet) {
+        return res.status(404).json({ message: 'Tablet not found' });
+      }
+      res.json({ message: 'Tablet quantity updated', tablet });
+    } catch (error) {
+      res.status(500).json({ message: 'Error updating tablet', error });
+    }
+  });
+  
+  router.get('/tablets', async (req, res) => {
+    try {
+      const tablets = await Tablet.find();
+      res.json(tablets);
+    } catch (error) {
+      res.status(500).json({ message: 'Error fetching tablet data', error });
+    }
+  });
+  router.get('/tablet/:_id', async (req, res) => {
+    try {
+        const {_id} = req.params;
+      const tablets = await Tablet.findById(_id);
+      res.json(tablets);
+    } catch (error) {
+      res.status(500).json({ message: 'Error fetching tablet data', error });
+    }
+  });
+  
+  router.delete('/deleteTablets/:_id' ,async(request,response)=>{
+    try{
+        const {_id} = request.params;
+
+        const result = await Tablet.findByIdAndDelete(_id);
+        if(!result){
+            return response.status(404).json({message:'Tablet Not found'})
+        }
+        return response.status(200).send({message:'Tablet Info deleted successfully'})
+
+    }catch(error){
+        console.log(error.message);
+        response.status(500).send({message:error.message});
+    }
+});
+  
 
 
 export default router;

@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import Spinner from '../components/Spinner'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import Back from '@/components/Back'
 
 const SignUp = () => {
     const [name,setName] = useState('')
@@ -41,6 +43,11 @@ const SignUp = () => {
 
   return (
     <div className=' pb-20'>
+       <div className=''>
+     <Link to={'/home'}>
+     <Back  />
+     </Link>
+     </div>
       <div className='flex justify-center mb-3'>
         {loading ? <Spinner/>:''}
         <form className='flex flex-col justify-center  bg-slate-200 p-12 rounded-3xl lg:p-24 shadow-2xl text-center'>

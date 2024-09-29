@@ -7,7 +7,7 @@ import axios from "axios";
 const Header = () => {
   const [logged, setLogged] = useState(false);
   const [email, setUserEmail] = useState('');
-  const [loginType, setLoginType] = useState(false);
+  const [loginType, setLoginType] = useState(true);
   const navigate = useNavigate();
 
   // Use useEffect to check localStorage and set loginType without causing infinite renders
@@ -153,6 +153,9 @@ const Header = () => {
         <button className="ml-[480px] bg-red-600 text-white p-3 rounded-[10px] w-[90px]">SOS</button>
         </Link>
         <button className="mt-10 ml-[50px] p-3 bg-slate-200 rounded-[10px]" onClick={()=>{logout()}}>Logout</button>
+        <Link to={'/inventory-chart'}>
+        <button className="mt-10 ml-[50px] p-3 bg-slate-200 rounded-[10px]" onClick={()=>{logout()}}>Inventory</button>
+        </Link>
         </div>}
     </div>
   );
