@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
 import {useNavigate,useParams} from 'react-router-dom';
+import Loading from '@/components/Loading';
 
 const EditTablet = () => {
 
@@ -8,6 +9,7 @@ const EditTablet = () => {
   const [name, setName] = useState();
   const [category, setCategory] = useState();
   const [quantity, setQuantity] = useState();
+  const [loading,setLoading] = useState(true);
   const navigate = useNavigate()
 
 
@@ -17,6 +19,7 @@ const EditTablet = () => {
       setName(response.data.name)
       setCategory(response.data.category)
       setQuantity(response.data.quantity)
+      setLoading(false)
       .catch((error)=>{
 
         alert("An error happened. Please check console!")
@@ -53,6 +56,10 @@ const EditTablet = () => {
     
     }
   return (
+    <>
+    {loading ? <div className='flex justify-center mt-10 mb-40'>
+      <Loading/>
+    </div>:
     <div className='mb-20 mt-20'>
     <div className='flex justify-center'>
         <form className='flex flex-col bg-slate-300 p-10 rounded-[13px] items-center shadow-2xl'>
@@ -65,6 +72,8 @@ const EditTablet = () => {
         </form>
     </div>
 </div>
+    }
+    </>
   )
 }
 

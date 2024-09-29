@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
-
+import BubbleMovement from '@/components/Bubble';
+import Back from '@/components/Back';
+import { Link } from 'react-router-dom';
 
 
 const AddTablet = () => {
@@ -40,6 +42,12 @@ const AddTablet = () => {
     }
     return (
         <div className='mb-20 mt-20'>
+            <BubbleMovement/>
+            <div className=''>
+     <Link to={'/tablets'}>
+     <Back  />
+     </Link>
+     </div>
             <div className='flex justify-center'>
                 <form className='flex flex-col bg-slate-300 p-10 rounded-[13px] items-center shadow-2xl'>
                     <p className='text-3xl font-bold mb-10'>Add Tablets</p>

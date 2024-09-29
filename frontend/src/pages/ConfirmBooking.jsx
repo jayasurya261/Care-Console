@@ -40,6 +40,7 @@ const ConfirmBooking = () => {
       })
       .then((response) => {
         console.log('Appointment booked successfully', response);
+        alert("Appointment Booked Successfully")
         navigate('/'); // Navigate to home or another page on success
       })
       .catch((error) => {

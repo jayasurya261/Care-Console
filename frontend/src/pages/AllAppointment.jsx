@@ -3,10 +3,12 @@ import axios from 'axios'
 import {images} from '../assets/images'
 import {Link} from 'react-router-dom'
 import BubbleMovement from '@/components/Bubble'
+import Loading from '@/components/Loading'
 
 const AllAppointment = () => {
 
       const [appointmentsData,setAppointmentsData] = useState([]);
+      const [loading,setLoading] = useState(true);
 
       useEffect(()=>{
             axios
@@ -14,63 +16,72 @@ const AllAppointment = () => {
             .then((response)=>{
               setAppointmentsData(response.data.data)
               console.log(response.data)
+              setLoading(false)
               
             })
            
       },[])
       console.log(appointmentsData)
-  return (
+  return (<>
+   {
+    loading ?<div className='flex justify-center mt-10 mb-40'>
+       <Loading></Loading>
+    </div> :
     <div className='mb-[400px]'>
-      <BubbleMovement/>
-      <div>
-        <p className='mb-10 font-medium text-3xl ml-5'>ALL APPOINTMENTS</p>
-        <div className=''>
-          <table className='w-full border-separate border-spacing-2'>
-        <tr className=''>
-          <th className='border border-slate-600 rounded-md'>No</th>
-          <th className='border border-slate-600 rounded-md'>Email</th>
-          <th className='border border-slate-600 rounded-md max-md:hidden'>Date
-          </th>
-          <th className='border border-slate-600 rounded-md'>Time</th>
-          <th className='border border-slate-600 rounded-md'>Info</th>
-        </tr>
-            {
-              appointmentsData.map((appointment,index)=>{
-                return(
-                  <tr key={appointment._id} className='h-8'>
-                  <td className='border border-slate-700 rounded-md text-center'>
-                    {index+1}
-                  </td>
-                  <td className='border border-slate-700 rounded-md text-center'>
-                    {appointment.email}
-                  </td>
-                  <td className='border border-slate-700 rounded-md text-center'>
-                    {appointment.date}
-                  </td>
-                  <td className='border border-slate-700 rounded-md text-center'>
-                    {appointment.time}
-                  </td>
-                  <td className='border border-slate-700 rounded-md text-center'>
-                    <div className='flex justify-center'>
-                      <Link to={`/appointment/${appointment._id}`}>
-                      <img className='w-6' src={images.info} alt=''></img>
-                      </Link>
-                    </div>
-                  </td>
-                 
-              </tr>
-              
-                )
-                
-              })
-              
-            }
-            </table>
+    <BubbleMovement/>
+    <div>
+      <p className='mb-10 font-medium text-3xl ml-5'>ALL APPOINTMENTS</p>
+      <div className=''>
+        <table className='w-full border-separate border-spacing-2'>
+      <tr className=''>
+        <th className='border border-slate-600 rounded-md'>No</th>
+        <th className='border border-slate-600 rounded-md'>Email</th>
+        <th className='border border-slate-600 rounded-md max-md:hidden'>Date
+        </th>
+        <th className='border border-slate-600 rounded-md'>Time</th>
+        <th className='border border-slate-600 rounded-md'>Info</th>
+      </tr>
+          {
+            appointmentsData.map((appointment,index)=>{
+              return(
+                <tr key={appointment._id} className='h-8'>
+                <td className='border border-slate-700 rounded-md text-center'>
+                  {index+1}
+                </td>
+                <td className='border border-slate-700 rounded-md text-center'>
+                  {appointment.email}
+                </td>
+                <td className='border border-slate-700 rounded-md text-center'>
+                  {appointment.date}
+                </td>
+                <td className='border border-slate-700 rounded-md text-center'>
+                  {appointment.time}
+                </td>
+                <td className='border border-slate-700 rounded-md text-center'>
+                  <div className='flex justify-center'>
+                    <Link to={`/appointment/${appointment._id}`}>
+                    <img className='w-6' src={images.info} alt=''></img>
+                    </Link>
+                  </div>
+                </td>
+               
+            </tr>
             
-  
-        </div>
+              )
+              
+            })
+            
+          }
+          </table>
+          
+
       </div>
     </div>
+  </div>
+
+    
+   }
+   </>
   )
 }
 
