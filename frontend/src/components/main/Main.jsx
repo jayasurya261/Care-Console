@@ -2,6 +2,9 @@ import React, { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context'
+import Back from '../Back'
+import { Link } from 'react-router-dom'
+import BubbleMovement from '../Bubble'
 
 const Main = () => {
 
@@ -9,6 +12,12 @@ const Main = () => {
 
     return (
         <div className='main'>
+            <BubbleMovement/>
+             <div className=''>
+     <Link to={'/'}>
+     <Back  />
+     </Link>
+     </div>
             <div className='nav'>
                 <p className='text-slate-500'>CARE CONSOLE</p>
                 <img src={assets.user_icon} alt="" />
@@ -54,7 +63,7 @@ const Main = () => {
                         </div>
                     </div>
                     <p className="bottom-info">
-                        Care Console may display inaccurate info, including about people, so double check its response Your privacy and gemini Apps
+                        Care Console may display inaccurate info, including about people, so double check its response Your privacy and Care Console App
                     </p>
                 </div>
             </div>

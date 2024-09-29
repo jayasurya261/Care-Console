@@ -1,9 +1,18 @@
 import React from 'react'
 import {images} from '../assets/images'
+import Back from '@/components/Back'
+import { Link } from 'react-router-dom'
+import BubbleMovement from '@/components/Bubble'
 
 const ContactUs = () => {
   return (
     <div className='mb-[400px]'>
+      <BubbleMovement/>
+       <div className='mb-10'>
+     <Link to={'/'}>
+     <Back  />
+     </Link>
+     </div>
       <div>
         <p className='text-2xl font-bold ml-20 mb-10'>CONTACT US</p>
         <div className='flex'>

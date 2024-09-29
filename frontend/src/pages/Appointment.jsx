@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Back from '@/components/Back';
+import BubbleMovement from '@/components/Bubble';
 
 const Appointment = () => {
  
@@ -64,8 +65,10 @@ const Appointment = () => {
 
   return (
     <>
+    <BubbleMovement/>
      <div className=''>
-     <Link to={'/'}>
+      
+     <Link>
      <Back  />
      </Link>
      </div>

@@ -71,7 +71,7 @@ const Header = () => {
   }
 
   return (
-    <div className="flex lg:space-x-[600px] bg-slate-400 pb-2 mb-10 ">
+    <div className="flex lg:space-x-[600px]  pb-2 mb-10 " style={{backgroundColor:'#4338ca'}}>
       <div>
         <img className="w-44 pl-20 " src={images.logo} alt="" />
       </div>
@@ -122,7 +122,7 @@ const Header = () => {
               <div className="flex items-center gap-2 cursor-pointer group relative">
                 <img className="w-8 " src={images.profile} alt="" />
                 <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
-                  <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
+                  <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4 text-white" style={{backgroundColor:'#7da0f9'}}>
                     <p
                       onClick={myProfile}
                       className="hover:text-black cursor-pointer"

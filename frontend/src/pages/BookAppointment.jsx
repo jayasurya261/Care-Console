@@ -9,6 +9,7 @@ import TimePicker from 'react-time-picker'; // Install this package
 import 'react-time-picker/dist/TimePicker.css';
 import { Link } from 'react-router-dom'
 import Back from '@/components/Back'
+import BubbleMovement from '@/components/Bubble'
 
 
 const BookAppointment = () => {
@@ -86,6 +87,7 @@ const BookAppointment = () => {
 
   return (
     <div className=''>
+    <BubbleMovement/>
        <div className=''>
      <Link to={'/home'}>
      <Back  />

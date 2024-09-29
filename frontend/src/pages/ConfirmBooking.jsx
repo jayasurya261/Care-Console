@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Back from '@/components/Back';
+import BubbleMovement from '@/components/Bubble';
 
 const ConfirmBooking = () => {
   const [email, setEmail] = useState('');
@@ -48,6 +49,7 @@ const ConfirmBooking = () => {
 
   return (
     <div className="flex pb-32 ">
+      <BubbleMovement/>
        <div className=''>
      <Link to={'/appointment'}>
      <Back  />

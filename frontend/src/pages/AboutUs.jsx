@@ -2,11 +2,13 @@ import React from 'react'
 import {images} from '../assets/images'
 import { Link } from 'react-router-dom'
 import Back from '@/components/Back'
+import BubbleMovement from '@/components/Bubble'
 
 const AboutUs = () => {
   return (<>
    <div className=''>
-     <Link to={'/home'}>
+    <BubbleMovement/>
+     <Link to={'/'}>
      <Back />
      </Link>
      </div>

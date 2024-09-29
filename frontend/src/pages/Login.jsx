@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import Back from '@/components/Back';
+import BubbleMovement from '@/components/Bubble';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -43,6 +44,7 @@ const Login = () => {
   };
 
   return (<>
+  <BubbleMovement/>
   <div className=''>
      <Link to={'/signup'}>
      <Back  />

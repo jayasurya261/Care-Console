@@ -4,6 +4,7 @@ import {images} from '../assets/images'
 import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import Back from '@/components/Back'
+import BubbleMovement from '@/components/Bubble'
 
 const AllAppointment = () => {
 
@@ -24,8 +25,9 @@ const AllAppointment = () => {
       console.log(appointmentsData)
   return (
     <div className='mb-96'>
+      <BubbleMovement/>
        <div className='mb-5'>
-     <Link to={'/home'}>
+     <Link to={'/'}>
      <Back  />
      </Link>
      </div>

@@ -5,6 +5,8 @@ import axios from 'axios';
 import Button1 from '../components/Button1';
 import { Link } from 'react-router-dom';
 import Loading from '../components/Loading';
+import Back from '@/components/Back';
+import BubbleMovement from '@/components/Bubble';
 
 // Register necessary components
 Chart.register(...registerables);
@@ -50,6 +52,12 @@ function InventoryChart() {
 
   return (
     <div>
+      <BubbleMovement/>
+    <div className=''>
+     <Link to={'/admin/all-appointment'}>
+     <Back  />
+     </Link>
+     </div>
     <div style={{ width: '80%', height: '400px' }} className='mb-20'> {/* Set desired width and height */}
       <div className='flex justify-between'>
       <h2 className=''>Tablet Inventory</h2>

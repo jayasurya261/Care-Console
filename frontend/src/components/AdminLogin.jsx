@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Back from './Back'
+import { Link } from 'react-router-dom'
+import BubbleMovement from './Bubble'
 
 const AdminLogin = () => {
 
@@ -37,8 +40,15 @@ const AdminLogin = () => {
     }
 
 
-  return (
+  return (<>
+  <BubbleMovement/>
+    <div className=''>
+     <Link to={'/signup'}>
+     <Back  />
+     </Link>
+     </div>
    <div className='flex justify-center pb-20 '>
+    
      <div className='flex justify-center text-center mt-16 bg-slate-200 p-20 rounded-[20px] shadow-2xl'>
       <div>
         <p className='mb-10 text-3xl'>
@@ -52,6 +62,7 @@ const AdminLogin = () => {
       </div>
     </div>
    </div>
+   </>
   )
 }
 
