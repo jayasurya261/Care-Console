@@ -249,6 +249,22 @@ router.get('/appointment-info', async(request,response)=>{
         response.status(500).send({message:error.message})
     }
 })
+router.delete('/deleteAppointment/:_id' ,async(request,response)=>{
+    try{
+        const {_id} = request.params;
+
+        const result = await Appointments.findByIdAndDelete(_id);
+        if(!result){
+            return response.status(404).json({message:'Appointment Not found'})
+        }
+        return response.status(200).send({message:'Appointment deleted successfully'})
+
+    }catch(error){
+        console.log(error.message);
+        response.status(500).send({message:error.message});
+    }
+});
+  
 
 
 router.get('/alert', async(request,response)=>{

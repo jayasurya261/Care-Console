@@ -154,7 +154,7 @@ const Header = () => {
         </Link>
         <button className="mt-10 ml-[50px] p-3 bg-slate-200 rounded-[10px]" onClick={()=>{logout()}}>Logout</button>
         <Link to={'/inventory-chart'}>
-        <button className="mt-10 ml-[50px] p-3 bg-slate-200 rounded-[10px]" onClick={()=>{logout()}}>Inventory</button>
+        <button className="mt-10 ml-[50px] p-3 bg-slate-200 rounded-[10px]" >Inventory</button>
         </Link>
         </div>}
     </div>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Back from '@/components/Back';
 import BubbleMovement from '@/components/Bubble';
 
 const Appointment = () => {
+  const navigate = useNavigate();
  
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
@@ -63,14 +64,30 @@ const Appointment = () => {
     }
   }, [email]);
 
+
+  function dele(){
+    alert("Are You sure about Deleteing this Appintment!")
+    axios.delete(`http://localhost:3000/appointments//deleteAppointment/${_id}`)
+    .then((response)=>{
+      console.log("Appointment Deleted Successfully")
+
+        navigate('/')
+    })
+    .catch((error)=>{
+      console.log(error)
+    })
+
+  }
+
   return (
     <>
     <BubbleMovement/>
-     <div className=''>
+     <div className='flex justify-between'>
       
      <Link>
      <Back  />
      </Link>
+     <button onClick={()=>dele()} className='p-3 bg-red-500 text-white rounded-[15px] mr-10 hover:scale-110'>Delete Appointment</button>
      </div>
     <div className='flex justify-center pt-10 pb-12'>
       <div className='flex justify-center bg-slate-200 shadow-2xl p-10 rounded-[20px]'>

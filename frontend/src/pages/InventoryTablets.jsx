@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { images } from '../assets/images';
 import Button1 from '../components/Button1';
+import BubbleMovement from '@/components/Bubble';
+import Back from '@/components/Back';
+
 
 const InventoryTablets = () => {
 
@@ -23,6 +26,12 @@ const InventoryTablets = () => {
       console.log(tabletsInfo)
   return (
     <div className='mb-56'>
+      <BubbleMovement/>
+      <div className=''>
+     <Link to={'/inventory-chart'}>
+     <Back  />
+     </Link>
+     </div>
         <div className='flex justify-between mr-20 ml-10'>
             <p className='text-3xl font-bold'>All Tablets</p>
             <Link to={'/addTablets'}>
