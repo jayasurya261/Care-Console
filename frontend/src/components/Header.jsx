@@ -71,7 +71,7 @@ const Header = () => {
 
   return (
     <div
-      className="flex lg:space-x-[500px]  pb-2 mb-10 "
+      className="flex lg:space-x-[500px]  pb-2  "
       style={{ backgroundColor: "#4338ca" }}
     >
       <div>

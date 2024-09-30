@@ -8,11 +8,15 @@
 
 
 
+
 *{
     font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .site-name{
     background: -webkit-linear-gradient(16deg,#55585a,#908b8b,#9f9090);

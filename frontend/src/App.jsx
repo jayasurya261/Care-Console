@@ -30,6 +30,7 @@ import DeleteTablet from './pages/tablet/DeleteTablet'
 import EditTablet from './pages/tablet/EditTablet'
 import InfoTablet from './pages/tablet/InfoTablet'
 import Back from './components/Back'
+import ProfileEdit from './pages/ProfileEdit'
 
 
 
@@ -69,6 +70,7 @@ const App = () => {
       <Route path='/deleteTablets/:_id' element={<DeleteTablet/>}/>
       <Route path='/infoTablets/:_id' element={<InfoTablet/>}/>
       <Route path='/back' element={<Back/>}/>
+      <Route path='/edit' element={<ProfileEdit/>}/>
 
 
     </Routes>

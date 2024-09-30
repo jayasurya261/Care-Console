@@ -18,6 +18,18 @@ const userSchema = mongoose.Schema(
             type:String,
             required:true,
         },
+        imageName: {
+            type: String,
+            required: false
+        },
+        data: {
+            type: Buffer, // Binary data
+            required: false
+        },
+        contentType: {
+            type: String, // To store the MIME type (e.g., 'image/jpeg')
+            required: false
+        }
 
     },
     {
@@ -61,6 +73,8 @@ const tabletSchema = new mongoose.Schema({
     quantity: { type: Number, required: true },  // Current stock quantity
     lastUpdated: { type: Date, default: Date.now }  // Timestamp of last update
   });
+  
+
   
   export const Tablet = mongoose.model('Tablet', tabletSchema);
   

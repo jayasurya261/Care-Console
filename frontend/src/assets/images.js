@@ -15,6 +15,9 @@ import bg from './bg.jpg'
 import edit from './edit.png'
 import dele from './delete.png'
 import back from './back.png'
+import profilebg from './profile-bg.jpg'
+import profileimg from './profileImg.jpg'
+import dots from './dots.png'
 
 export const images = {
     logo,
@@ -34,4 +37,7 @@ export const images = {
     edit,
     dele,
     back,
+    profilebg,
+    profileimg,
+    dots,
 }

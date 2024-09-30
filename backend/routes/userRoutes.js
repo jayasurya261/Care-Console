@@ -2,6 +2,8 @@ import express from 'express'
 import { User,Appointments,Admin,Tablet } from '../models/models.js';
 const router = express.Router();
 import twilio from 'twilio';
+import multer from 'multer';
+
 
 //Route for Post user details
 router.post('/',async(request,response)=>{
@@ -359,5 +361,51 @@ router.post('/add-tablet', async (req, res) => {
 });
   
 
+//-----------------Images upload------------
+
+const upload = multer({
+    storage: multer.memoryStorage(), // Storing image in memory as a buffer
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB file size limit
+    fileFilter: (req, file, cb) => {
+      // Validate file type (e.g., images only)
+      if (!file.mimetype.startsWith('image/')) {
+        return cb(new Error('File is not an image'), false);
+      }
+      cb(null, true);
+    },
+  });
+  
+  router.put('/upload/:id', upload.single('image'), async (req, res) => {
+    if (!req.file) {
+      return res.status(400).send('No file uploaded.');
+    }
+  
+    // Validate ObjectId (basic check for valid MongoDB ObjectId)
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      return res.status(400).send('Invalid user ID.');
+    }
+  
+    try {
+      // Find the user by ID and update their image fields
+      const updatedUser = await User.findByIdAndUpdate(
+        req.params.id,
+        {
+          imageName: req.file.originalname,
+          data: req.file.buffer, // Image stored as binary (Buffer)
+          contentType: req.file.mimetype,
+        },
+        { new: true } // Return the updated document
+      );
+  
+      if (!updatedUser) {
+        return res.status(404).send('User not found.');
+      }
+  
+      res.status(200).send(`Image updated for user with ID: ${updatedUser._id}`);
+    } catch (error) {
+      console.error('Error updating the image:', error);
+      res.status(500).send('Error updating the image.');
+    }
+  });
 
 export default router;
