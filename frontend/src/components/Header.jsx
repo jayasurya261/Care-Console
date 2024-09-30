@@ -23,7 +23,7 @@ const Header = () => {
       .then((response) => {
         setUserEmail(response.data.data.email);
         console.log(email);
-        navigate(`/my-appointments/${email}`);
+        navigate(`/my-appointments/${response.data.data.email}`);
       })
       .catch((error) => {
         console.log(error);

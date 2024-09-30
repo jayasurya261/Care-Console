@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { images } from '../assets/images';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -9,13 +9,11 @@ import BubbleMovement from '@/components/Bubble';
 
 const ConfirmBooking = () => {
   const [email, setEmail] = useState('');
-
+  const [message, setMessage] = useState(false);
   const { date, time, description } = useParams(); // Pull date, time, description from URL parameters
-  console.log(`${date} ${time} ${description}`);
-
   const navigate = useNavigate();
 
-  function confirm() {
+  const confirm = () => {
     const userId = localStorage.getItem('userId'); // Assuming userId is stored in localStorage
 
     axios
@@ -24,45 +22,52 @@ const ConfirmBooking = () => {
         const fetchedEmail = response.data.data.email; // Fetch email from the response
         setEmail(fetchedEmail); // Update the email state
 
-        // Create the info object, including the `prescription` and `fees` fields
-        const prescription = "No prescription added"
         const info = {
           email: fetchedEmail,
           date,
           time,
           description,
           prescription: 'No prescription added', // Example prescription
-          fees: 'Fees will be show after the doctor consulting', // Fixed fees for now, replace if dynamic
+          fees: 'Fees will be shown after the doctor consultation',
         };
 
-        // Post the appointment data
         return axios.post('http://localhost:3000/appointments/add-appointments', info);
       })
       .then((response) => {
         console.log('Appointment booked successfully', response);
-        alert("Appointment Booked Successfully")
-        navigate('/'); // Navigate to home or another page on success
+        setMessage(true); // Show the success message
       })
       .catch((error) => {
         console.error('Error booking appointment: ', error);
       });
-  }
+  };
+
+  // useEffect to handle the 5-second delay after confirming
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        navigate('/'); // Navigate after 5 seconds
+      }, 3000); // 5000ms = 5 seconds
+
+      return () => clearTimeout(timer); // Clean up timeout
+    }
+  }, [message, navigate]); // Dependency on 'message' and 'navigate'
 
   return (
-    <div className="flex pb-32 ">
-      <BubbleMovement/>
-       <div className=''>
-     <Link to={'/appointment'}>
-     <Back  />
-     </Link>
-     </div>
+    <div className="flex pb-32">
+      <BubbleMovement />
+      <div className=''>
+        <Link to={'/appointment'}>
+          <Back />
+        </Link>
+      </div>
       <div>
         <img className="w-96 ml-40 rounded-[20px]" src={images.doctor} alt="Doctor" />
       </div>
       <div className="ml-28">
         <p className="text-3xl font-medium mb-10">CONFIRM APPOINTMENT</p>
         <p className="text-2xl font-medium mb-5">Dr. Hermoine M.B.B.S</p>
-        
+
         <div className="flex font-medium mb-5">
           <p>DATE: </p>
           <p>{date}</p>
@@ -77,9 +82,16 @@ const ConfirmBooking = () => {
           </button>
         </div>
       </div>
-      
+
+      {message && (
+        <div className='mt-[500px] ml-40 h-10 p-3 border-2 border-blue-800 scale-110'>
+          <p>Appointment Successfully Booked</p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default ConfirmBooking;
+
+

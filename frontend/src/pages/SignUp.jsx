@@ -59,11 +59,11 @@ const SignUp = () => {
         <input value={email} onChange={(e)=>setEmail(e.target.value)}  className='mt-8 p-3 rounded-full' type="email" placeholder='Enter Email'/>
         <input value={password} onChange={(e)=>setPassword(e.target.value)}  className='mt-8 p-3 rounded-full ' type="password" placeholder='Enter Password'/>
         <input value={number} onChange={(e)=>setNumber(e.target.value)}  className='mt-8 p-3 rounded-full ' type="text" placeholder='Enter mobile number'/>
-        <button type='submit' onClick={createUser} className='mt-8 p-2 rounded-full bg-slate-400 text-white hover:bg-slate-300 hover:text-black'>SUBMIT</button>
+        <button type='submit' onClick={createUser} className='mt-8 p-2 rounded-full  text-white hover:bg-slate-300 ' style={{backgroundColor:'rgb(108,96,240)'}}>SUBMIT</button>
         <br/>
-        <button onClick={()=>navigate('/login')} className='bg-slate-400 text-white rounded-full p-2 hover:bg-slate-300 hover:text-black'>Login?</button>
-        <p className='mt-6'>Are u an Admin?</p>
-        <button onClick={()=>navigate('/admin-login')} className='rounded-full   hover:text-blue-800 mt-7 underline'> Admin</button>
+        <button onClick={()=>navigate('/login')} className=' text-white rounded-full p-2 hover:bg-slate-300 ' style={{backgroundColor:'rgb(108,96,240)'}}>Login?</button>
+        <p className='mt-6'>Are you an Admin?</p>
+        <button onClick={()=>navigate('/admin-login')} className='rounded-full    text-blue-800 mt-7 underline text-[19px]'> Admin</button>
         </form>
       </div>
     </div>

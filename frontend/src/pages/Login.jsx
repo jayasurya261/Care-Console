@@ -68,15 +68,14 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
-        <button type='submit' className='font-medium mt-5 p-2 bg-slate-400 text-white rounded-[5px] w-20 hover:bg-slate-300 hover:text-black'>
+        <button type='submit' className='font-medium mt-5 p-2 bg-slate-400 text-white rounded-[5px] w-20 hover:bg-slate-300 w-[250px] rounded-full' style={{backgroundColor:'rgb(108,96,240)'}}>
           Submit
         </button>
         <br />
         <button
           type='button'
           onClick={toSignup}
-          className='mt-3 p-1 bg-slate-400 text-white rounded-[5px] w-28 hover:bg-slate-300 hover:text-black'
-        >
+          className='mt-3 p-1 bg-slate-400 text-white rounded-[5px] w-28 hover:bg-slate-300 ' style={{backgroundColor:'rgb(108,96,240)'}}>
           New User?
         </button>
       </form>
