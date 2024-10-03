@@ -22,12 +22,12 @@ const AdminLogin = () => {
         });
         setAdminInfo(response.data)
         console.log(adminInfo)
-        if(adminInfo.data == null){
+        if(response.data.data == null){
           alert("User not Found!")
         }
         else
         {
-          localStorage.setItem('userId', adminInfo.data._id);
+          localStorage.setItem('userId', response.data.data._id);
           localStorage.setItem('login-type','admin')
             navigate('/admin/all-appointment')
         }

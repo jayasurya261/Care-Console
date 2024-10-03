@@ -52,7 +52,7 @@ function InventoryChart() {
 
   return (
     <div>
-      <BubbleMovement/>
+
     <div className=''>
      <Link to={'/admin/all-appointment'}>
      <Back  />

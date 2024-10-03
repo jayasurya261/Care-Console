@@ -31,6 +31,7 @@ import EditTablet from './pages/tablet/EditTablet'
 import InfoTablet from './pages/tablet/InfoTablet'
 import Back from './components/Back'
 import ProfileEdit from './pages/ProfileEdit'
+import VideoCall from './pages/VideoCall'
 
 
 
@@ -71,6 +72,7 @@ const App = () => {
       <Route path='/infoTablets/:_id' element={<InfoTablet/>}/>
       <Route path='/back' element={<Back/>}/>
       <Route path='/edit' element={<ProfileEdit/>}/>
+      <Route path='/video' element={<VideoCall/>}/>
 
 
     </Routes>

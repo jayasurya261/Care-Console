@@ -12,7 +12,10 @@ router.post('/',async(request,response)=>{
             !request.body.name ||
             !request.body.email ||
             !request.body.password ||
-            !request.body.number
+            !request.body.number ||
+            !request.body.location ||
+            !request.body.birth ||
+            !request.body.language
         ){
             return response.status(400).send({
                 message: 'Send all required fields: Name,Email,Password',
@@ -23,6 +26,9 @@ router.post('/',async(request,response)=>{
             email : request.body.email,
             password : request.body.password,
             number : request.body.number,
+            birth : request.body.birth,
+            location : request.body.location,
+            language : request.body.language,
         };
         const userInfo = await User.create(userDetails)
         return response.status(201).send(userInfo)

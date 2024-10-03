@@ -43,7 +43,7 @@ const InfoTablet = () => {
       <Loading/>
     </div>:
     <div>
-      <BubbleMovement/>
+
       <div className=''>
      <Link to={'/tablets'}>
      <Back  />

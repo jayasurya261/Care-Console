@@ -124,11 +124,11 @@ const Appointment = () => {
           {
             fees ==="No prescription added"?"":<div className='flex mb-4 justify-center'>
             
-            <Link to='/payment'>
+            <Link to='/payment'>`
             <button className='p-3 rounded-[10px] bg-slate-400'>Pay Online</button>
             </Link>
           </div>
-          }
+          }`
         
         </div>
       </div>

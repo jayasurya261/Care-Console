@@ -33,7 +33,6 @@ const InventoryTablets = () => {
       </div> :
 
         <div className='mb-56'>
-          <BubbleMovement />
           <div className=''>
             <Link to={'/inventory-chart'}>
               <Back />

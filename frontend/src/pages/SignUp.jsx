@@ -11,6 +11,9 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [number, setNumber] = useState('');
+  const [birth, setBirth] = useState('');
+  const [location, setLocation] = useState('');
+  const [language, setLanguage] = useState('');
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
@@ -33,6 +36,9 @@ const SignUp = () => {
       email,
       password,
       number,
+      birth,
+      location,
+      language,
     };
     
     setLoading(true);
@@ -91,6 +97,25 @@ const SignUp = () => {
             className='mt-8 p-3 rounded-full'
             type="text"
             placeholder='Enter mobile number'
+          />
+          <input
+            value={birth}
+            onChange={(e) => setBirth(e.target.value)}
+            className='mt-8 p-3 rounded-full'
+            placeholder='Enter mobile Birth Date'
+          />
+          <input
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            className='mt-8 p-3 rounded-full'
+            placeholder='Enter Location'
+          />
+          <input
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            className='mt-8 p-3 rounded-full'
+            placeholder='Enter youe Language'
+            type='text'
           />
           <button
             type='submit'

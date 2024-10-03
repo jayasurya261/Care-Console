@@ -42,7 +42,6 @@ const AddTablet = () => {
     }
     return (
         <div className='mb-20 mt-20'>
-            <BubbleMovement/>
             <div className=''>
      <Link to={'/tablets'}>
      <Back  />

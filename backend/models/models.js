@@ -18,6 +18,18 @@ const userSchema = mongoose.Schema(
             type:String,
             required:true,
         },
+        birth:{
+            type:String,
+            required:true,
+        },
+        location:{
+            type:String,
+            required:true,
+        },
+        language:{
+            type:String,
+            required:true,
+        },
         imageName: {
             type: String,
             required: false
